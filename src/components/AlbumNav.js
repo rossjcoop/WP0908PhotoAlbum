@@ -6,11 +6,16 @@ class SideNav extends Component {
   render() {
     return (
     	<div className="nav">
+    		<NavLink to={"/"} className="link">
+    			<div className="navButton">
+		    		<span className="link">Home</span>
+		    	</div>
+		    </NavLink>
     		{this.props.albums.map(album => (
     			<div key={album.albumId}>
-    				<NavLink to={"/album/" + album.albumId}>
-    					<div>
-		    				<span>{album.albumName}</span>
+    				<NavLink to={"/album/" + album.albumId} className="link">
+    					<div className="navButton">
+		    				<span className="link">{album.albumName}</span>
 		    			</div>
 		    		</NavLink>
     			</div>

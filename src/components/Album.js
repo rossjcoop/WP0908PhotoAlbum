@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import SideNav from './AlbumNav'
 
 
+
 class Album extends Component {
 	static defaultProps = {
 		album:{
@@ -34,14 +35,14 @@ class Album extends Component {
     			<SideNav />
     		</div>
     		<div className="albumPics"> 
-    			
-    			<br />
 	    		{this.props.album.photos.map(photos => (
-	    			<div key={photos.id}>
-	    				<Link to={"/album/" + this.props.match.params.albumId + "/" + photos.id}>
+	    		<div key={photos.id} className="albumCard">
+	    			<Link to={"/album/" + this.props.match.params.albumId + "/" + photos.id}>
+	    			<div className="albumCardInfo">
 		    			<img src={photos.previewURL} />
-		    			</Link>
-	    			</div>
+		    		</div>
+		    		</Link>
+	    		</div>
 	    		))}
 	    	</div>		
     	</div>     
