@@ -15,7 +15,7 @@ class App extends Component {
 
 
   componentWillMount(){
-    const albumSearches = ["Classic Cars","Japanese Cars", "Muscle Cars", "Toy Cars", "Las Vegas", "France"]
+    const albumSearches = ["Classic Cars","Japanese Cars", "Muscle Cars", "Toy Cars", "Las Vegas", "France", "Ireland", "Los Angeles", "The Beach"]
     albumSearches.map(i => getAlbums(i))
 
   }

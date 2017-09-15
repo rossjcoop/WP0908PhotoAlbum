@@ -27,10 +27,15 @@ class Album extends Component {
   render() {
     return (
     	<div className="container">
+    		<div className="header">
+    			<h1>{this.props.album.albumName}</h1>
+    		</div>   		
     		<div className="navBar">
     			<SideNav />
     		</div>
     		<div className="albumPics"> 
+    			
+    			<br />
 	    		{this.props.album.photos.map(photos => (
 	    			<div key={photos.id}>
 	    				<Link to={"/album/" + this.props.match.params.albumId + "/" + photos.id}>

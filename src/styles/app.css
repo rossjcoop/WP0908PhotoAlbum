@@ -1,14 +1,44 @@
 .container {
   width: 800px;
   margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  background: white;
 }
 
 .album {
+  width: 800px;
   display: flex;
   flex-wrap: wrap;
+
+}
+
+.albumCard > img:hover {
+  border: 5px solid red;
+}
+
+.albumCardInfo {
+  margin: 0 auto;
+  text-align: center;
 }
 
 .albumPics {
+  width: 650px;
   display: flex;
   flex-wrap: wrap;
+ 
+}
+
+.header {
+  width: 800px;
+  border-bottom: 1px solid red;
+}
+
+.header > h1 {
+  font-size: 64px;
+}
+
+
+.navBar {
+  width: 150px;
 }

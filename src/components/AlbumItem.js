@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { selectPicture } from '../actions/actions'
+import { Link } from 'react-router-dom'
 
 class AlbumItem extends Component {
 
@@ -12,11 +13,14 @@ class AlbumItem extends Component {
   render() {
     return (
     	<div className="container">
+    		<div>
+    			<Link to={"/album/" + this.props.match.params.albumId}>Back</Link>
 	    		<img src={this.props.picture.webformatURL} />
 	    		<br />
 	    		<span>Title: {this.props.picture.tags}</span>
 	    		<br />
 	    		<span>Picture by: {this.props.picture.user}</span>
+	    	</div>
     	</div>     
     )
   }
