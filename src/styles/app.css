@@ -1,0 +1,14 @@
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.album {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.albumPics {
+  display: flex;
+  flex-wrap: wrap;
+}
